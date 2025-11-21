@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Valmiki | Software Engineer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and accent colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#111827', // Gray-900
+                        'secondary-light': '#F3F4F6', // Gray-100
+                        'accent': '#4F46E5', // Indigo-600
+                        'accent-light': '#6366F1', // Indigo-500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smooth scrolling and dark mode elements */
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        /* Custom border for the project generator box */
+        #project-generator-container {
+            background-color: #1F2937; /* Gray-800 */
+        }
+    </style>
+</head>
+<body class="bg-primary-dark text-secondary-light font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-primary-dark/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-xl font-bold text-accent-light hover:text-accent transition duration-300">
+                        Abhishek <span class="text-white">Valmiki</span>
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-4">
+                    <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-secondary-light hover:bg-gray-700 transition duration-300">About</a>
+                    <a href="#skills" class="px-3 py-2 rounded-lg text-sm font-medium text-secondary-light hover:bg-gray-700 transition duration-300">Skills</a>
+                    <a href="#projects" class="px-3 py-2 rounded-lg text-sm font-medium text-secondary-light hover:bg-gray-700 transition duration-300">Projects</a>
+                    <a href="#ai-tool" class="px-3 py-2 rounded-lg text-sm font-medium text-secondary-light hover:bg-gray-700 transition duration-300">AI Lab</a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg text-sm font-medium text-secondary-light hover:bg-accent-light bg-accent rounded-lg transition duration-300">Contact</a>
+                </div>
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="mobile-menu-button" class="sm:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden sm:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-secondary-light hover:bg-gray-700">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-secondary-light hover:bg-gray-700">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-secondary-light hover:bg-gray-700">Projects</a>
+                <a href="#ai-tool" class="block px-3 py-2 rounded-md text-base font-medium text-secondary-light hover:bg-gray-700">AI Lab</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-secondary-light hover:bg-accent-light bg-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto">
+        <!-- 1. HOME / HERO Section -->
+        <section id="home" class="section-padding pt-24 min-h-[80vh] flex items-center px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between w-full">
+                <div class="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
+                    <p class="text-xl text-accent-light mb-2">Hello, I'm</p>
+                    <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight text-white mb-4">
+                        Abhishek Valmiki
+                    </h1>
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-gray-400 mb-6">
+                        <span class="text-white">&lt;</span>Software Engineer<span class="text-white">/&gt;</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 max-w-lg mx-auto md:mx-0 mb-8">
+                        Building scalable and efficient full-stack applications with a focus on clean architecture and performance optimization.
+                    </p>
+                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-accent hover:bg-accent-light shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                        View Projects
+                    </a>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <!-- Professional Photo Placeholder -->
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 bg-gray-700 rounded-full overflow-hidden border-4 border-accent-light shadow-[0_0_40px_rgba(79,70,229,0.5)] flex items-center justify-center">
+                        <span class="text-xl text-white font-semibold">Abhishek's Photo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT Section -->
+        <section id="about" class="section-padding bg-gray-800 rounded-2xl mx-4 sm:mx-6 lg:mx-8 shadow-2xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent-light">About Me</h2>
+            <div class="max-w-4xl mx-auto text-center space-y-6 text-gray-300 text-lg">
+                <p>
+                    I am a results-driven Software Engineer with **3+ years of experience** specializing in the MERN stack (MongoDB, Express, React, Node.js). My passion lies in transforming complex requirements into elegant, high-performance, and maintainable software solutions.
+                </p>
+                <p>
+                    I thrive in collaborative environments and possess a strong commitment to continuous learning and best practices, including **Test-Driven Development (TDD)** and **DevOps principles**. Currently, I am focused on exploring distributed systems and cloud infrastructure (AWS/GCP) to build highly scalable backend services.
+                </p>
+                <p class="font-semibold text-white">
+                    Let's connect and build the next generation of digital products!
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS Section -->
+        <section id="skills" class="section-padding px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">Technical Skills</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <!-- Skill Card Template -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-accent/50 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-accent-light mb-2">Frontend</h3>
+                    <ul class="space-y-1 text-gray-300 list-disc list-inside">
+                        <li>React, Redux, Context API</li>
+                        <li>TypeScript, JavaScript (ES6+)</li>
+                        <li>HTML5, CSS3, Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-accent/50 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-accent-light mb-2">Backend & API</h3>
+                    <ul class="space-y-1 text-gray-300 list-disc list-inside">
+                        <li>Node.js, Express.js</li>
+                        <li>Python (Django, Flask)</li>
+                        <li>RESTful APIs, GraphQL</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-accent/50 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-accent-light mb-2">Databases</h3>
+                    <ul class="space-y-1 text-gray-300 list-disc list-inside">
+                        <li>MongoDB (NoSQL)</li>
+                        <li>PostgreSQL (SQL)</li>
+                        <li>Redis (Caching)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-accent/50 transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-xl font-semibold text-accent-light mb-2">DevOps & Tools</h3>
+                    <ul class="space-y-1 text-gray-300 list-disc list-inside">
+                        <li>Git, GitHub/GitLab</li>
+                        <li>Docker, Kubernetes (Basic)</li>
+                        <li>AWS (S3, EC2), CI/CD (Jenkins/GitHub Actions)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS Section -->
+        <section id="projects" class="section-padding bg-gray-900 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent-light">Featured Projects</h2>
+
+            <div class="space-y-12 max-w-4xl mx-auto">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-accent hover:border-accent-light transition duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Microservice E-commerce Platform</h3>
+                    <p class="text-sm text-gray-400 mb-4">MERN Stack, Docker, PostgreSQL</p>
+                    <p class="text-gray-300 mb-4">
+                        Developed a scalable e-commerce application broken down into independent microservices (Product Catalog, User Authentication, Order Processing). Utilized Docker for containerization, significantly improving deployment reliability and environment parity.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">React/Redux</span>
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">Node.js/Express</span>
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-accent hover:border-accent-light transition duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Real-time Data Visualization Dashboard</h3>
+                    <p class="text-sm text-gray-400 mb-4">Python/Flask, WebSocket, D3.js</p>
+                    <p class="text-gray-300 mb-4">
+                        Engineered a dashboard to monitor live IoT sensor data using WebSockets for bidirectional communication. Optimized data processing in the backend (Python/Flask) to handle over 1,000 requests per second, ensuring sub-second latency for visualization.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">Python</span>
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">WebSockets</span>
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">D3.js</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-t-4 border-accent hover:border-accent-light transition duration-300">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Personal Blog and CMS (Content Management System)</h3>
+                    <p class="text-sm text-gray-400 mb-4">Next.js, MongoDB, Vercel</p>
+                    <p class="text-gray-300 mb-4">
+                        Built a performance-focused blog using Next.js for server-side rendering (SSR) and static site generation (SSG). Integrated a custom CMS backend for seamless content creation and deployment. Achieved a perfect 100/100 Lighthouse performance score.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">Next.js</span>
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="text-xs font-medium bg-gray-700 text-accent-light px-3 py-1 rounded-full">SSR/SSG</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. AI PROJECT GENERATOR (API Integration Showcase) -->
+        <section id="ai-tool" class="section-padding px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-white">AI Innovation Lab</h2>
+            <p class="text-center text-lg text-gray-400 mb-12 max-w-3xl mx-auto">Showcasing integration with large language models. Get innovative project ideas for any technology domain.</p>
+
+            <div id="project-generator-container" class="max-w-3xl mx-auto p-8 rounded-2xl shadow-[0_0_50px_rgba(79,70,229,0.3)] border border-accent-light/30">
+                <h3 class="text-2xl font-semibold text-white mb-4">Project Idea Generator</h3>
+                <form id="idea-form" onsubmit="handleIdeaGeneration(event)">
+                    <label for="domain-input" class="block text-gray-300 mb-2">Enter a Technology Domain (e.g., "Fintech", "Health-tech", "Gaming"):</label>
+                    <input type="text" id="domain-input" value="Sustainable Agriculture" required class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-accent-light focus:ring-accent-light outline-none transition duration-300">
+
+                    <button type="submit" id="generate-button" class="w-full py-3 bg-accent hover:bg-accent-light text-white font-bold rounded-lg transition duration-300 disabled:opacity-50 flex items-center justify-center">
+                        <svg id="loading-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Generate Ideas
+                    </button>
+                </form>
+
+                <div id="output-area" class="mt-8">
+                    <h4 class="text-xl font-semibold text-accent-light mb-3 hidden" id="output-header">Generated Ideas:</h4>
+                    <div id="ideas-result" class="space-y-4 text-gray-200">
+                        <!-- Output will be injected here -->
+                    </div>
+                    <div id="sources-result" class="mt-6 text-sm text-gray-500">
+                        <!-- Sources will be injected here -->
+                    </div>
+                </div>
+                <div id="error-message" class="mt-4 p-3 bg-red-800 text-white rounded-lg hidden"></div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT Section -->
+        <section id="contact" class="section-padding bg-gray-800 rounded-2xl mx-4 sm:mx-6 lg:mx-8 shadow-2xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-accent-light focus:ring-accent-light outline-none">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                        <input type="email" id="email" name="email" required class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-accent-light focus:ring-accent-light outline-none">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-accent-light focus:ring-accent-light outline-none"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full py-3 bg-accent hover:bg-accent-light text-white font-bold rounded-lg transition duration-300 shadow-lg">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-8 text-center space-y-2">
+                    <p class="text-gray-400">
+                        Email: <a href="mailto:abhishek.valmiki@example.com" class="text-accent-light hover:underline">abhishek.valmiki@example.com</a>
+                    </p>
+                    <p class="text-gray-400">
+                        LinkedIn: <a href="#" target="_blank" class="text-accent-light hover:underline">/in/abhishekvalmiki</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 Abhishek Valmiki. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-accent-light transition duration-300">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-accent-light transition duration-300">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-accent-light transition duration-300">X (Twitter)</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and API Call -->
+    <script>
+        // --- Utility Functions ---
+
+        /** Converts base64 to ArrayBuffer (for internal u
